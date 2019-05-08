@@ -1,22 +1,70 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<table>
-  <tr>
-    <th>Game </th>
-    <th>Geners</th>
-    <th>Release</th>
-  </tr>
-  <tr  *ngFor="let movies of movie" >
-    <td>{{movies.film}}</td>
-    <td>{{movies.Geners}}</td>
-    <td>{{movies.Release}}</td>
-  </tr>
-  
-</table>
-
-<div> 
-  
-</div>
+<div class="parent">
+    <h1 class="herotext">CHANNELS LIST</h1>
+    <table>
+      <tr>
+        <th>film </th>
+        <th>Geners</th>
+        <th>Release</th>
+      </tr>
+      <tr  *ngFor="let movies of movie" >
+        <td>{{movies.film}}</td>
+        <td>{{movies.Geners}}</td>
+        <td>{{movies.Release}}</td>
+    
+      </tr>
+      
+    </table>
+    
+    </div>
+    <div> 
+      <table>
+      <tr>
+        <th>Name </th>
+        <th>Marks</th>
+        <th>Pass/Fail</th>
+      </tr>
+      <tr *ngFor="let std of Student">
+        <td>{{std.name}}</td>
+        <td>{{std.Mark}}</td>
+        <td *ngIf="std.Mark > 33">Pass</td>
+        <td *ngIf="std.Mark < 33" style="color:red">Fail</td>
+        
+        
+      </tr>
+      
+    </table>
+    
+    <table  *ngFor="let employes of Employe;" >
+      
+      <tr>
+        
+        <th>ID </th>
+        <th>Name</th>
+        <th>Designation</th>
+      </tr>
+      <th colspan="3" style="color:red; background-color:yellow">{{employes.dept}}</th>
+        <tr *ngFor="let people of employes.detail;">
+        <td >{{people.id}}</td>
+        <td >{{people.name}}</td>
+        <td >{{people.Designation}}</td>
+       
+       
+     </tr>
+    
+    
+    
+    </table>
+      
+    </div>
+    <p>
+      <img [src]="imgUrl"/>
+       <img src="{{imgUrl}}"/>
+    </p>
+    <button [disabled]="isDisabled">Sign Up</button>
+    <p style="color:yellow">{{count}}</p>
+    <button [disabled]="isDisabled" (click)="counter()"> Counter </button>
+    <button (click)="reset()"> Reset </button>
+    
+    
 

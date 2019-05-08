@@ -1,4 +1,4 @@
-p {
+/*p {
   font-family: Lato;
 }
 table {
@@ -17,10 +17,74 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-table {
-border-collapse: collapse;
-}
-td {
-padding: 1em;
-border: 1px solid black;
-}
+*/
+body{
+    background: #111;
+    font-family: Montserrat;
+  }
+  .heading{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .parent{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .herotext{
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 4px;
+    
+  }
+  .herotext::first-letter{
+    color: red;
+  }
+  .herotext:before , .herotext:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 10%;
+    top: 29px;
+    background: white;
+  }
+  .herotext:after{
+    right: 95%;
+  }
+  .herotext:before{
+    left: 95%;
+  }
+  tr > th{
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  tr > td{
+    padding: 12px 10px;
+    color: #fff;
+    font-weight: 400;
+  }
+  tr{
+    transition: 230ms ease-in;
+    border-bottom: 1px solid #fff;
+    will-change: transform,background,cursor;
+  }
+  tr:not(:first-child):hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+  }
+  tr:first-child{
+    background: red;
+  }
+  
