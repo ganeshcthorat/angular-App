@@ -20,7 +20,7 @@
     <div> 
       <table>
       <tr>
-        <th>Name </th>
+        <th>Name</th>
         <th>Marks</th>
         <th>Pass/Fail</th>
       </tr>
@@ -65,6 +65,18 @@
     <p style="color:yellow">{{count}}</p>
     <button [disabled]="isDisabled" (click)="counter()"> Counter </button>
     <button (click)="reset()"> Reset </button>
+   
+    <div *ngIf="show" style="color:white">Text to show</div>
     
     
+ <ng-template [ngIf]="isLoggedIn" [ngIfElse]="loggedOut">
+  <div>
+    Welcome back, friend.
+  </div>
+</ng-template>
 
+<ng-template #loggedOut>
+  <div>
+    Please friend, login.
+  </div>
+</ng-template>

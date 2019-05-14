@@ -4,8 +4,13 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+ 
 })
+
 export class AppComponent {
+  show: boolean = true;
+  isLoggedIn = true;
+  loggedOut = false;
   name = 'Angular';
   imgUrl ='https://www.gstatic.com/webp/gallery/1.webp';
   isDisabled = false;
