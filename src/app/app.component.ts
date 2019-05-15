@@ -67,10 +67,32 @@ Student=[
 count = 0;
 counter(){
   this.count++
-  this.count ==10 ? this.isDisabled = true : this.isDisabled = false;
+  this.count ===10 ? this.isDisabled = true : this.isDisabled = false;
 }
 reset(){
   this.count--
   this.isDisabled = false
 }
+xyz:any="Ganesh";
+
+
+
+type="password";
+onClick(){
+  this.xyz="Sagar"
+  
 }
+
+
+onClick2(){
+  this.type="text";
+}
+onClick3(){
+  this.type="password";
+}
+onClick4(){
+  this.xyz="";
+  this.type="";
+}
+}
+
