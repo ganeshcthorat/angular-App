@@ -1,0 +1,14 @@
+<h2>
+# Property and Event Binding
+</h2>
+<div (click)="changeDivText()">{{divValue}}</div>
+<div class="sample-div" [ngClass]="{'color-red':redFlag,'colorgreen':
+greenFlag}">{{title2}}</div>
+<div class="sample-div" [ngClass]="{'color-blue':blueFlag}">blue color text</div>
+<input type="text" [value]="getTextValue()" [attr.data-some-attr]="someAttr"
+[style.color]="color">
+<input [type]="type" value="password">
+<div *ngIf="showDivFlag">this example of ngIf</div>
+<div [hidden]="hiddenFlag">this is example of hidden property binding</div>
+<button (click)="changeText()">click me</button>
+<button (click)="reset()">reset</button>
