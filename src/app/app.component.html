@@ -95,4 +95,14 @@
 <button (click)="onClick4()">Reset All</button>
 </div>
 
+<hr>
+<select [(ngModel)]="country" >
+<option *ngFor="let c of country" [ngValue]="country">{{c.name}}</option>
+</select>
+<select>
+<option *ngFor="let s of c.state" >{{s.st}}</option>
+</select>
+<hr>
+
+
 <app-footer></app-footer>

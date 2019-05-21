@@ -64,6 +64,15 @@ Student=[
     
     }
   ]
+  country=[
+    {id:1, name:"India",
+    state:[{st:"MH",
+    city:["abd", "Pune"]}]},
+    
+    {id:1, name:"US",
+    state:[{st:"MK",
+    city:["SDFS", "FSDS"]}]}
+  ]
 count = 0;
 counter(){
   this.count++
